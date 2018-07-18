@@ -1,0 +1,214 @@
+.comment-number,
+.reply-title,
+.woocommerce-Reviews-title,
+.comment-reply-title{
+	position: relative;
+	font-size: 20px;
+	margin: 0 0 46px;
+	font-weight: 400;
+}
+.comments-area,
+#comments{
+	.comment-number,
+	.comment-list{
+	    margin-top: 52px;
+	    padding: 49px 0 0 0;
+	    border-top: 2px solid #cccccc;
+	}
+	.comment-list,
+	.commentlist{
+		list-style: none;
+		
+		&:empty{
+			display: none;
+		}
+		ul.children{
+			list-style: none;
+			margin: 0;
+		}
+		.comment .comment-respond{
+			margin-bottom: 30px;
+		}
+	}
+	.comment-number {
+		+ .comment-list,
+		+ .commentlist{
+			padding: 0;
+			margin: 0;
+			border: none;
+		}
+	}
+	li.comment{
+		border-bottom: 2px solid #cccccc;
+	    margin-bottom: 25px;
+	    padding-bottom: 25px;
+	    display: block;
+	    overflow: hidden;
+	    position: relative;
+	    &:last-child{
+	    	border-bottom: none;
+	    	margin-bottom: 0;
+	    	padding-bottom: 0;
+	    }
+	    > ul.children{
+	    	border-top: 2px solid #cccccc;
+	    	padding-top: 38px;
+	    	padding-left: 15px;
+	    	margin-top: 18px;
+	    	@media( min-width: $screen-md-min){
+	    		padding-left: 100px;
+	    	}
+	    	/* Level 3+ */
+	    	li.comment{
+	    		> ul.children{
+	    			@media( min-width: $screen-md-min){
+			    		padding-left: 30px;
+			    	}
+	    		}
+	    	}
+	    }
+	    &.dir-left{
+	    	.comment-avatar{
+		    	float: left;
+		    	margin: 0 10px 0 0;
+		    }
+		    .comment-content{
+		    	padding-left: 100px;
+		    	@media (max-width: $screen-sm-max){
+		    		padding-left: 40px;
+		    	}
+		    }
+	    }
+	    &.dir-right{
+	    	.comment-avatar{
+		    	float: right;
+		    	margin: 0 0 0 10px;
+		    }
+		    .comment-content{
+		    	padding-right: 100px;
+		    	@media (max-width: $screen-sm-max){
+		    		padding-right: 40px;
+		    	}
+		    }
+	    }
+	    .comment-avatar{
+	    	border: 1px solid #ced0d1;
+	    	background-color: $white;
+	    	padding: 4px;
+	    	max-width: 80px;
+	    	@include border-radius(50%);
+	    	@media (max-width: $screen-sm-max){
+	    		max-width: 30px;
+	    		max-height: 30px;
+	    	}
+	    }
+	    .comment-author{
+	    	margin: 0 0 7px;
+	    	color: $accent_color;
+	    	font-size: $body_font_size;
+	    	a{
+	    		color: $accent_color;
+	    	}
+	    }
+	    .comment-meta {
+	    	font-size: 14px;
+	    	color: #969696;
+	    	margin-bottom: 3px;
+	    	a{
+	    		color: #969696;
+	    	}
+	    }
+	    .comment-content{
+	    	position: relative;
+	    }
+	    .reply{
+	    	margin-top: -7px;
+	    	a{
+	    		padding: 0 10px;
+	    		color: $white;
+	    		background-color: $accent_color;
+	    		font-size: 12px;
+	    		text-transform: uppercase;
+	    		line-height: 25px;
+	    		display: inline-block;
+	    		letter-spacing: 0.03em;
+	    		&:hover{
+	    			background-color: $primary_color;
+	    		}
+	    	}
+	    }
+	    /* RTL Language */
+	    &.dir-right{
+	    	> ul.children{
+		    	@media( min-width: $screen-md-min){
+		    		padding-right: 100px;
+		    		padding-left: 0;
+		    	}
+		    	/* Level 3+ */
+		    	li.comment{
+		    		> ul.children{
+		    			@media( min-width: $screen-md-min){
+				    		padding-right: 30px;
+				    		padding-left: 0;
+				    	}
+		    		}
+		    	}
+		    }
+		    .comment-avatar{
+		    	float: right;
+		    	margin: 0 0 0 30px;
+		    }
+	    }
+	}
+	.comment-respond{
+		border-top: 2px solid #cccccc;
+		margin-top: 0px;
+		padding-top: 56px;
+	}
+	.comment-body + .comment-respond{
+		margin-top: 25px;
+	}
+	//&.no-comment{
+		.comment-respond{
+			margin-top: 25px;
+		}
+	//}
+}
+.cms-comment-pagination{
+	padding-top: 25px;
+	&:empty{
+		display: none;
+	}
+}
+.comment-form{
+	margin: 0 -15px;
+	.logged-in-as,
+	.comment-field{
+		padding: 0 15px;
+		margin-bottom: 15px;
+		textarea,
+		input{
+			background-color: transparent;
+			border-width: 0 0 2px 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.form-submit{
+		padding: 0 15px;
+		input[type="submit"]{
+			margin-top: 15px;
+			background-color: $accent_color;
+			border-color: $accent_color;			
+			&:hover{
+				background-color: $primary_color;
+				border-color: $primary_color;
+				border-width: 1px;
+			}
+		}
+	}
+}
+/* Page Comment  */
+.page + #comments{
+	margin-top: 60px;
+}

@@ -1,0 +1,71 @@
+#cms-page-title-wrapper{
+	position: relative;
+	background-color: transparent;
+	background-image: url(../images/pagetitle/bg-pagetitle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    margin-bottom: 70px;
+	padding-top: 190px;
+	padding-bottom: 42px;
+	color: $page_title_color;
+	font-family: $ExtraFont;
+	&:before{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: "";
+		display: block;
+		z-index: 1;
+		background: rgba(#101011, 0.39);
+	}
+	> div {
+		padding-left: 15px;
+		padding-right: 15px;
+		position: relative;
+		z-index: 1;
+	}
+	@media (max-width: 1024px){
+		background-attachment: scroll !important;
+	}
+}
+
+#cms-page-title{
+	padding-bottom: 180px;
+	.cms-page-title-text{
+		color: $page_title_color;
+		font-size: 60px;
+		font-weight: 300;
+		padding: 0;
+		margin: 0;
+		.useWord-first{
+			font-weight: 100;
+			border-bottom: 2px solid $page_title_color;
+			padding-bottom: 6px;
+			display: inline-block;
+		}
+		@media (max-width: $screen-xs-max){
+			font-size: 30px;
+		}
+	}
+
+}
+#cms-breadcrumb{
+	font-size: 106.666666666666667%;
+	span{
+		color: $accent_color;
+	}
+	a span{
+		color: $white;
+		padding-right: 3px;
+		&:hover{
+			color: $accent_color;
+		}
+	}
+}
+.cms-breadcrumb{
+	
+}

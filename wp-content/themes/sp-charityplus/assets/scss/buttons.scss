@@ -1,0 +1,202 @@
+
+/* Default Button */
+.btn,
+.btn-default, 
+button,
+.button,
+input[type="submit"],
+.submit,
+.vc_general.vc_btn3.btn,
+.tnp-field input[type="submit"],
+.tp-caption.Theme-Primary-Button.btn, .Theme-Primary-Button.btn{
+	color: $white;
+	font-size: 16px;
+	text-align: center;
+	display: inline-block;
+	padding: 9px 24px 9px 32px;
+	background-color: $btn_default_bg;
+	border-color: $btn_default_bg;
+	border-width: 0;
+	border-style: none;
+	position: relative;
+	cursor: pointer;
+	font-family: $ExtraFont;
+	@include border-radius($btn_default_radius);
+	@include transition();
+	&:hover,
+	&:active,
+	&:focus{
+		background: $btn_primary_bg;
+		border-color: $btn_primary_bg;
+		border-width: 0;
+		color: $white;
+	}
+	&:before{
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 23px 0 23px 12px;
+		border-color: transparent transparent transparent rgba(#fff, 0.39);
+		position: absolute;
+		top: 50%;
+		left: 0;
+		@include transform(translateY(-50%));
+	}
+	/* Button size */
+	&.btn-large{
+		font-size: 18px;
+		padding: 11px 20px 11px 27px;
+	}
+	/* Disabled */
+	&.disabled{
+		cursor: not-allowed;
+		@include opacity(0.5);
+	}
+	/* Button Alt */
+	&.btn-alt{
+		background-color: transparent;
+		color: $primary_color;
+		border-width: 2px;
+		border-style: solid;
+		padding: 7px 27px;
+		&:before{
+			display: none;
+		}
+		&:hover{
+			background-color: $primary_color;
+			border-color: $primary_color;
+			color: $white;
+		}
+	}
+	/* Button White */
+	&.btn-white{
+		background-color: $white;
+		color: $accent_color;
+		border-color: $white;
+		&:hover{
+			background-color: $accent_color;
+			color: $white;
+			border-color: $accent_color;
+		}
+		&.btn-alt{
+			background-color: transparent;
+			color: $white;
+			&:hover{
+				background-color: $white;
+				color: $accent_color;
+				border-color: $white;
+			}
+		}
+	}
+}
+
+/* Primary Button */
+.btn-primary,
+input.btn-primary[type="submit"],
+.vc_general.vc_btn3.btn-primary ,
+.tnp-widget .tnp-field input[type="submit"],
+.widget_newsletterwidgetminimal .tnp-widget-minimal .tnp-submit,
+.tp-caption.Theme-Primary-Button.btn-primary, .Theme-Primary-Button.btn-primary{
+	background-color: $btn_primary_bg;
+	color: $white;
+	border-color: $btn_primary_border;
+	@include border-radius($btn_primary_radius);
+	&:hover{
+		background-color: $btn_default_bg;
+		border-color: $btn_default_bg;
+		color: $white;
+	}
+	/* Button Alt */
+	&.btn-alt{
+		background-color: transparent;
+		color: $accent_color;
+		&:hover{
+			background-color: $accent_color;
+			border-color: $accent_color;
+			color: $white;
+		}
+	}
+}
+/* Button Block */
+.btn-block{
+	display: block;
+}
+
+/* Button Rounded */
+.btn-style-rounded {
+	/* Default Button */
+	.btn,
+	.btn-default,
+	button,
+	.button,
+	input[type="submit"],
+	.submit,
+	.vc_general.vc_btn3.btn,
+	.tnp-field input[type="submit"]{
+		padding: 9px 24px;
+		&:before{
+			display: none;
+		}
+	}
+	&.btn-shadow{
+		.btn,
+		.btn-default,
+		button,
+		.button,
+		input[type="submit"],
+		.submit,
+		.vc_general.vc_btn3.btn,
+		.tnp-field input[type="submit"]{
+			@include css3-prefix('box-shadow','0px 3px 0px 0px rgba(0, 0, 0, 0.39)');
+		}
+	}
+}
+.cms-header-3.btn-style-rounded {
+	/* Default Button */
+	.btn,
+	.btn-default,
+	button,
+	.button,
+	input[type="submit"],
+	.submit,
+	.vc_general.vc_btn3.btn,
+	.tnp-field input[type="submit"]{
+		padding: 9px 24px;
+		&:before{
+			display: none;
+		}
+	}
+	&.btn-shadow{
+		.btn,
+		.btn-default,
+		button,
+		.button,
+		input[type="submit"],
+		.submit,
+		.vc_general.vc_btn3.btn,
+		.tnp-field input[type="submit"]{
+			@include css3-prefix('box-shadow','0px 3px 0px 0px rgba(0, 0, 0, 0.39)');
+		}
+	}
+}
+
+.cms-header-4.btn-style-default {
+	/* Default Button */
+	.btn,
+	.btn-default,
+	button,
+	.button,
+	input[type="submit"],
+	.submit,
+	.vc_general.vc_btn3.btn,
+	.tnp-field input[type="submit"],
+	.btn-primary{
+		&:before{
+			display: none;
+		}
+		&.btn-alt{
+			border-width: 1px;
+		}
+	}
+}

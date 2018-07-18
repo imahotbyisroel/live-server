@@ -1,0 +1,79 @@
+.sidebar-area,
+.wpb_widgetised_column {
+	.widget{
+		margin-bottom: 55px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		.wg-title{
+			font-size: 20px;
+			font-weight: 400;
+			background: url('../images/widget/bg-title.jpg') left center repeat-x;
+			span{
+				background-color: $white;
+				padding-right: 10px;
+			}
+		}
+		&.widget_search{
+
+		}
+		&.widget_recent_entries,
+		&.widget_recent_comments,
+		&.cms_widget_recent_comments,
+		&.widget_rss,
+		&.widget_archive,
+		&.widget_nav_menu,
+		&.widget_pages,
+		&.widget_meta,
+		&.widget_product_categories{
+			margin-bottom: 47px;
+		}
+		&.widget_categories {
+			margin-bottom: 47px;
+			.wg-title{
+				margin-bottom: 12px;
+			}
+			ul{
+				a{
+					border-bottom: none;
+					padding: 6px 0;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		/* CMS recent post */
+		.cms-recent-item{
+			.entry-title{
+				line-height: 22px;
+				font-size: 15px;
+			}
+		}
+		/* Tags Cloud */
+		.tagcloud{
+			a{
+				line-height: 1;
+				font-size: 11px !important;
+				text-transform: uppercase;
+				white-space: nowrap;
+				word-wrap: normal;
+				padding-top: 9.5px;
+				padding-bottom: 9.5px;
+				margin-right: 6px;
+			}
+		}
+	}
+}
+.sidebar-shop{
+	.wg-title{
+		font-size: 15px;
+		margin-bottom: 25px;
+	}
+}
+.sidebar-area{
+
+	@media (max-width: $screen-sm-max){
+		margin-top: 50px;
+	}
+}

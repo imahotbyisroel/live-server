@@ -1,0 +1,165 @@
+
+input,
+.tnp-widget .tnp-field input,
+.tnp-widget .tnp-field input{
+	max-width: 100%;
+	outline: 0 none transparent;
+	
+	&[type="text"],
+	&[type="email"],
+	&[type="password"],
+	&[type="phone"],
+	&[type="tel"],
+	&[name="zk_name"],
+	&[name="zk_phone"]{
+		width: 100%;
+		text-align: inherit;	
+	}
+	&[type="radio"],
+	&[type="checkbox"]{
+		margin-right: 10px;
+		vertical-align: middle;
+		+ label,
+		+ .label{
+			font-weight: 400;
+			color: $heading_color;
+		}
+	}
+	&[disabled]{
+		cursor: not-allowed !important;
+		@include opacity(0.5);
+	}
+	&.invalid{
+		@include box-shadow(0, 0, 2px, 0, red);
+		-webkit-appearance: none;
+	}
+}
+input,
+select,
+textarea,
+.tnp-widget .tnp-field input[type="text"],
+.tnp-widget .tnp-field input[type="email"]{
+	border:  $form_field_border;
+	background: $form_field_bg;
+	color: $form_field_color;
+	@include  border-radius($form_field_radius);
+	@include transition();
+	&:hover,
+	&:active,
+	&:focus{
+		border-color: $primary_color;
+	}
+}
+.woocommerce-invalid,
+.invalid,
+.required{
+	> input{
+		border-color: $accent_color;
+	}
+}
+input,
+textarea,
+.tnp-widget .tnp-field input[type="text"],
+.tnp-widget .tnp-field input[type="email"]{
+	padding: 8px 15px;
+}
+select,
+textarea{
+	max-width: 100%;
+	outline: 0 none transparent !important;
+}
+
+select{
+	height: 34px;
+	padding: 0 30px 0 15px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:$white url("../images/select-arrow.png") right center no-repeat;
+	@include border-radius(3px);
+}
+textarea{
+	width: 100%;
+	&[name="order_comments"]{
+		min-height: 100px;
+	}
+	vertical-align: top;
+}
+
+/* Form Row */
+.form-row{
+	margin-bottom: 10px;
+	@media (min-width: $screen-sm-min){
+		&.form-row-first,
+		&.form-row-last{
+			width: calc(50% - 5px);
+			float: left;
+		}
+		&.form-row-last{
+			float: right;
+		}
+	}
+	&.form-row-wide{
+		display: block;
+		overflow: hidden;
+		clear: both;
+	}
+}
+/* Custom Select 2 */
+.select2-container.select2-container--default  {
+	.select2-selection--single{
+		height: 45px;
+		border-color: $main_border_color;
+		@include border-radius(0);
+		.select2-selection__rendered{
+			line-height: 45px;
+		}
+	}
+	.select2-selection__arrow{
+		height: calc(100% - 2px);
+    	width: 39px;
+    	background: url('../images/select-arrow.png') center center no-repeat;
+    	b{
+    		display: none;
+    	}
+	}
+	&.select2-dropdown-open,
+	&.select2-drop-above {
+		.select2-choice, 
+		.select2-choices{
+			border: $form_field_border;
+			@include border-radius(0);
+		}
+	}
+}
+.select2-drop-active{
+	border: $form_field_border;
+}
+
+/* post-password-form */
+form.post-password-form{
+	input[name="post_password"]{
+		margin-bottom: 30px;
+	}
+}
+/* Place Holder Text */
+::-moz-placeholder{
+}
+:-ms-input-placeholder {
+}
+::-webkit-input-placeholder  {
+}
+::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+/* for IE10+ */
+select::-ms-expand {
+    display: none;
+}
+form input::-ms-clear,
+form input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; 
+}

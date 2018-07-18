@@ -1,0 +1,265 @@
+
+*{
+	outline: none !important;
+	&:hover,
+	&:active,
+	&:focus{
+		outline: none !important;
+	}
+}
+.nopadding{
+	padding: 0 !important;
+}
+.nopadding-top{
+	padding-top: 0 !important;
+}
+.nopadding-right{
+	padding-right: 0 !important;
+}
+.nopadding-bottom{
+	padding-bottom: 0 !important;
+}
+.nopadding-left{
+	padding-left: 0 !important;
+}
+
+.require,
+.required{
+	color: red;
+}
+.regular-color,
+.primary-color{
+	color: $primary_color;
+}
+.accent-color{
+	color: $accent_color;
+	&:hover{
+		color: $primary_color;
+	}
+}
+.status-color{
+	color: $status_color;
+}
+.green-color{
+	color: #8bca4e;
+}
+.light-blue-color{
+	color: #1db3e7;
+}
+.red-color{
+	color: #f73a08;
+}
+.accent-bg{
+	background-color: $accent_color;
+	color: $white;
+}
+.regular-bg,
+.primary-bg{
+	background-color: $primary_color;
+	color: $white;
+}
+.white-bg{
+	background: $white;
+}
+.available { color: $available_color;}
+.unavailable{ color: red;}
+
+.unselected{
+	cursor: not-allowed; 
+}
+/* Text Color */
+.color-white{
+	color: $white;
+}
+
+/* Block */
+.inline-block{
+	display: inline-block;
+	&.accent-bg{
+		padding: 3px 10px;
+	}
+}
+.rounded {
+	@include border-radius(3px);
+}
+
+/* heading */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.woocommerce-notice{
+	color: $heading_color;
+	font-family: $extra_font;
+	@include transition();
+	a{
+		color: $heading_color;
+		&:hover{
+			color: $heading_color_hover;
+		}
+	}
+}
+/* Block Quote */
+blockquote,
+.blockquote{
+	cite{
+		font-size: 120%;
+	}
+}
+/* Link */
+a{
+	color: $accent_color;
+	@include transition();
+	&:hover{
+		color: $primary_color;
+		text-decoration: none;
+	}
+	&[style="visibility: hidden;"]{
+		display: none;
+	}
+}
+/* Alignment */
+.alignright,
+.text-right{
+	text-align: right;
+}
+.alignleft,
+.text-left {
+	text-align: left;
+}
+.aligncenter,
+.text-center {
+	text-align: center;
+}
+/* small font */
+small,
+.small {
+	font-size: $small_font_size;
+}
+/* Table */
+table,
+.table{
+	width: 100%;
+	border: 1px solid #eee;
+	thead{
+		color: #222;
+		text-transform: uppercase;
+		border: 1px solid #eee;
+	}
+	tr{
+		border-bottom: 1px solid #eee;
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+	th{
+		font-weight: 400;
+		text-align: left;
+	}
+	th,
+	td{
+		padding: 5px;
+		overflow: hidden;
+	}
+}
+/* paragraph */
+p{
+	&:last-child{
+		margin-bottom: 0 !important;
+	}
+}
+/* Checkbox / Radio */
+.checkbox{
+	padding-left: 20px;
+}
+/* paging-navigation */
+.woocommerce-pagination,
+.paging-navigation{
+	width: 100%;
+	clear: both;
+	text-align: center;
+	ul.page-numbers{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		border: none;
+		li{
+			display: inline-block;
+		}
+		&:hover{
+			background: none;
+		}
+	}
+	.page-numbers{
+		width: 36px;
+		height: 36px;
+		line-height: 34px;
+		display: inline-block;
+		margin: 0 1px;
+		border: 1px solid #ccc;
+		color: $primary_color;
+		@include border-radius(3px);
+		&:hover{
+			background-color: $accent_color;
+			color: $white;
+			border-color: $accent_color;
+		}
+	}
+	span.page-numbers{
+		background-color: $accent_color;
+		color: $white;
+		border-color: $accent_color;
+		&:hover{
+			cursor: not-allowed;
+			@include opacity(0.5);
+		}
+	}
+
+	&.paging-dots{
+		.page-numbers{
+			width: 10px;
+			height: 10px;
+			font-size: 0;
+			@include border-radius(50%);
+			&.dots{
+				display: none;
+			}
+		}
+	}
+}
+.cms_pagination,
+.paging-navigation{
+	+ .cms-grid-view-all{
+		margin-top: 30px;
+	}
+}
+/* page link */
+.page-links{
+	margin-bottom: 20px;
+	a,
+	> span:not(.page-links-title){
+		width: 36px;
+		height: 36px;
+		line-height: 34px;
+		display: inline-block;
+		margin: 0 1px;
+		border: 1px solid #ccc;
+		color: $primary_color;
+		text-align: center;
+		@include border-radius(3px);
+		&:hover{
+			background-color: $accent_color;
+			color: $white;
+			border-color: $accent_color;
+		}
+	}
+	> span:not(.page-links-title){
+		cursor: not-allowed;
+		background-color: $accent_color;
+		color: $white;
+		border-color: $accent_color;
+	}
+}

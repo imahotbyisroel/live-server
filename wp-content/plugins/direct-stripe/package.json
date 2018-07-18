@@ -1,0 +1,29 @@
+{
+  "name": "direct-stripe",
+  "version": "2.0.0",
+  "private": true,
+  "description": "WordPress plugin for Stripe handled transactions ",
+  "author": "Quench",
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-plumber": "*",
+    "gulp-postcss": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "postcss": "*"
+  },
+  "dependencies": {
+    "graceful-fs": "*"
+  }
+}
